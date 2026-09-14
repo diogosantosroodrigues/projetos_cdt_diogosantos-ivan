@@ -1,0 +1,27 @@
+{
+    "nome_loja": "BRASIL CAMISAS",
+    "categoria": "Camisas de Times Brasileiros",
+    "quantidade_times": 20,
+    "times": [
+        "Athletico-PR",
+        "Atletico-MG",
+        "Bahia",
+        "Botafogo",
+        "Chapecoense",
+        "Corinthians",
+        "Coritiba",
+        "Cruzeiro",
+        "Flamengo",
+        "Fluminense",
+        "Gremio",
+        "Internacional",
+        "Mirassol",
+        "Palmeiras",
+        "Red Bull Bragantino",
+        "Remo",
+        "Santos",
+        "Sao Paulo",
+        "Vasco",
+        "Vitoria"
+    ]
+}
