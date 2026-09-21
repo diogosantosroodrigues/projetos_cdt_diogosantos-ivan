@@ -1,7 +1,7 @@
 {
-    "nome_loja": "BRASIL CAMISAS",
-    "categoria": "Camisas de Times Brasileiros",
-    "quantidade_times": 20,
+    "loja": "Nação dos Mantos - Automação de Vendas",
+    "taxa_entrega": 10.0,
+    "preco_personalizacao": 20.0,
     "times": [
         "Athletico-PR",
         "Atletico-MG",
