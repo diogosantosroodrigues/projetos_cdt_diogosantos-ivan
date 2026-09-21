@@ -22,7 +22,7 @@ except ImportError:
 
 
 # =====================================================
-# CONFIGURAÇÕES DA LOJA REAL
+# CONFIGURAÇÕES DA LOJA E DADOS DOS TIMES
 # =====================================================
 
 NOME_LOJA = "Nação dos Mantos - Automação"
@@ -31,28 +31,88 @@ PASTA_ESCUDOS = "escudos"
 PRECO_PERSONALIZACAO = 20.00
 TAXA_ENTREGA = 10.00
 
-# Links diretos dos escudos em PNG de alta qualidade hospedados no Wikimedia / GitHub CDN
+# Dicionário completo com os 20 times e URLs CDN estáveis (PNGs transparentes em HD)
 times_dados = {
-    "Athletico-PR": {"preco": 149.90, "sigla": "CAP", "cor": "#c62828", "arquivo": "athletico-pr.png", "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Athletico_Paranaense_vw1.png"},
-    "Atletico-MG": {"preco": 159.90, "sigla": "CAM", "cor": "#212121", "arquivo": "atletico-mg.png", "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Atletico_mineiro_galo.png"},
-    "Bahia": {"preco": 139.90, "sigla": "BAH", "cor": "#1565c0", "arquivo": "bahia.png", "url": "https://upload.wikimedia.org/wikipedia/pt/9/90/Esporte_Clube_Bahia_logo.png"},
-    "Botafogo": {"preco": 149.90, "sigla": "BOT", "cor": "#111111", "arquivo": "botafogo.png", "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Botafogo_de_Futebol_e_Regatas_logo.png"},
-    "Chapecoense": {"preco": 119.90, "sigla": "CHA", "cor": "#2e7d32", "arquivo": "chapecoense.png", "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Associa%C3%A7%C3%A3o_Chapecoense_de_Futebol_logo.png"},
-    "Corinthians": {"preco": 169.90, "sigla": "COR", "cor": "#212121", "arquivo": "corinthians.png", "url": "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png"},
-    "Coritiba": {"preco": 129.90, "sigla": "CFC", "cor": "#388e3c", "arquivo": "coritiba.png", "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Coritiba_FCD.png"},
-    "Cruzeiro": {"preco": 159.90, "sigla": "CRU", "cor": "#1565c0", "arquivo": "cruzeiro.png", "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Cruzeiro_Esporte_Clube_%28logo_2021%29.png"},
-    "Flamengo": {"preco": 179.90, "sigla": "FLA", "cor": "#b71c1c", "arquivo": "flamengo.png", "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flamengo_brazilian_matching_star.png"},
-    "Fluminense": {"preco": 159.90, "sigla": "FLU", "cor": "#00695c", "arquivo": "fluminense.png", "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Fluminense_FC_escudo.png"},
-    "Gremio": {"preco": 159.90, "sigla": "GRE", "cor": "#0277bd", "arquivo": "gremio.png", "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Gr%C3%Aamio_FBPA.png"},
-    "Internacional": {"preco": 159.90, "sigla": "INT", "cor": "#d32f2f", "arquivo": "internacional.png", "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Escudo_do_Sport_Club_Internacional.png"},
-    "Mirassol": {"preco": 119.90, "sigla": "MIR", "cor": "#f9a825", "arquivo": "mirassol.png", "url": "https://upload.wikimedia.org/wikipedia/pt/b/b2/Mirassol_FC.png"},
-    "Palmeiras": {"preco": 179.90, "sigla": "PAL", "cor": "#1b5e20", "arquivo": "palmeiras.png", "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.png"},
-    "Red Bull Bragantino": {"preco": 139.90, "sigla": "RBB", "cor": "#d32f2f", "arquivo": "bragantino.png", "url": "https://upload.wikimedia.org/wikipedia/pt/9/9e/RedBullBragantino.png"},
-    "Remo": {"preco": 119.90, "sigla": "REM", "cor": "#283593", "arquivo": "remo.png", "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Clube_do_Remo.png"},
-    "Santos": {"preco": 149.90, "sigla": "SAN", "cor": "#212121", "arquivo": "santos.png", "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png"},
-    "Sao Paulo": {"preco": 169.90, "sigla": "SPFC", "cor": "#c62828", "arquivo": "sao-paulo.png", "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.png"},
-    "Vasco": {"preco": 159.90, "sigla": "VAS", "cor": "#212121", "arquivo": "vasco.png", "url": "https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png"},
-    "Vitoria": {"preco": 129.90, "sigla": "VIT", "cor": "#c62828", "arquivo": "vitoria.png", "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Esporte_Clube_Vit%C3%B3ria_logo.png"}
+    "Athletico-PR": {
+        "preco": 149.90, "sigla": "CAP", "cor": "#c62828", "arquivo": "athletico-pr.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/athletico-pr.png"
+    },
+    "Atletico-MG": {
+        "preco": 159.90, "sigla": "CAM", "cor": "#212121", "arquivo": "atletico-mg.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/atletico-mg.png"
+    },
+    "Bahia": {
+        "preco": 139.90, "sigla": "BAH", "cor": "#1565c0", "arquivo": "bahia.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/bahia.png"
+    },
+    "Botafogo": {
+        "preco": 149.90, "sigla": "BOT", "cor": "#111111", "arquivo": "botafogo.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/botafogo.png"
+    },
+    "Chapecoense": {
+        "preco": 119.90, "sigla": "CHA", "cor": "#2e7d32", "arquivo": "chapecoense.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/chapecoense.png"
+    },
+    "Corinthians": {
+        "preco": 169.90, "sigla": "COR", "cor": "#212121", "arquivo": "corinthians.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/corinthians.png"
+    },
+    "Coritiba": {
+        "preco": 129.90, "sigla": "CFC", "cor": "#388e3c", "arquivo": "coritiba.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/coritiba.png"
+    },
+    "Cruzeiro": {
+        "preco": 159.90, "sigla": "CRU", "cor": "#1565c0", "arquivo": "cruzeiro.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/cruzeiro.png"
+    },
+    "Flamengo": {
+        "preco": 179.90, "sigla": "FLA", "cor": "#b71c1c", "arquivo": "flamengo.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/flamengo.png"
+    },
+    "Fluminense": {
+        "preco": 159.90, "sigla": "FLU", "cor": "#00695c", "arquivo": "fluminense.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/fluminense.png"
+    },
+    "Gremio": {
+        "preco": 159.90, "sigla": "GRE", "cor": "#0277bd", "arquivo": "gremio.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/gremio.png"
+    },
+    "Internacional": {
+        "preco": 159.90, "sigla": "INT", "cor": "#d32f2f", "arquivo": "internacional.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/internacional.png"
+    },
+    "Mirassol": {
+        "preco": 119.90, "sigla": "MIR", "cor": "#f9a825", "arquivo": "mirassol.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/mirassol.png"
+    },
+    "Palmeiras": {
+        "preco": 179.90, "sigla": "PAL", "cor": "#1b5e20", "arquivo": "palmeiras.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/palmeiras.png"
+    },
+    "Red Bull Bragantino": {
+        "preco": 139.90, "sigla": "RBB", "cor": "#d32f2f", "arquivo": "bragantino.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/red-bull-bragantino.png"
+    },
+    "Remo": {
+        "preco": 119.90, "sigla": "REM", "cor": "#283593", "arquivo": "remo.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/remo.png"
+    },
+    "Santos": {
+        "preco": 149.90, "sigla": "SAN", "cor": "#212121", "arquivo": "santos.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/santos.png"
+    },
+    "Sao Paulo": {
+        "preco": 169.90, "sigla": "SPFC", "cor": "#c62828", "arquivo": "sao-paulo.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/sao-paulo.png"
+    },
+    "Vasco": {
+        "preco": 159.90, "sigla": "VAS", "cor": "#212121", "arquivo": "vasco.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/vasco.png"
+    },
+    "Vitoria": {
+        "preco": 129.90, "sigla": "VIT", "cor": "#c62828", "arquivo": "vitoria.png",
+        "url": "https://cdn.jsdelivr.net/gh/vitorfs/hex-bot@master/public/logos/vitoria.png"
+    }
 }
 
 times = list(times_dados.keys())
@@ -61,27 +121,37 @@ if not os.path.exists(PASTA_ESCUDOS):
     os.makedirs(PASTA_ESCUDOS)
 
 
+# =====================================================
+# FUNÇÃO DE DOWNLOAD ROBUSTA
+# =====================================================
+
 def baixar_escudos_automaticamente():
-    """Baixa as imagens ignorando restrições rigorosas de SSL e User-Agent."""
     contexto_ssl = ssl._create_unverified_context()
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'}
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+    }
     
     for time, info in times_dados.items():
         caminho_local = os.path.join(PASTA_ESCUDOS, info["arquivo"])
-        # Se não existe ou se foi baixado corrompido/em branco (tamanho muito pequeno)
+        
+        # Faz o download caso o arquivo não exista ou esteja corrompido/zerado (< 200 bytes)
         if not os.path.exists(caminho_local) or os.path.getsize(caminho_local) < 200:
             try:
                 req = urllib.request.Request(info["url"], headers=headers)
-                with urllib.request.urlopen(req, context=contexto_ssl, timeout=5) as response, open(caminho_local, 'wb') as out_file:
-                    out_file.write(response.read())
+                with urllib.request.urlopen(req, context=contexto_ssl, timeout=8) as response:
+                    conteudo = response.read()
+                    if len(conteudo) > 200:
+                        with open(caminho_local, 'wb') as out_file:
+                            out_file.write(conteudo)
+                        print(f"[OK] Escudo de {time} baixado com sucesso.")
             except Exception as e:
-                print(f"Erro ao baixar escudo do {time}: {e}")
+                print(f"[ERRO] Não foi possível baixar {time}: {e}")
 
 baixar_escudos_automaticamente()
 
 
 # =====================================================
-# BANCO DE DADOS
+# BANCO DE DADOS (SQLITE)
 # =====================================================
 
 conexao = sqlite3.connect(BANCO)
@@ -122,7 +192,7 @@ conexao.commit()
 
 
 # =====================================================
-# INTERFACE GRÁFICA
+# INTERFACE GRÁFICA (TKINTER)
 # =====================================================
 
 janela = tk.Tk()
@@ -158,12 +228,11 @@ def obter_escudo_widget(parent, time):
             photo = ImageTk.PhotoImage(img)
             imagens_carregadas[time] = photo
             
-            lbl_img = tk.Label(parent, image=photo, bg="white")
-            return lbl_img
+            return tk.Label(parent, image=photo, bg="white")
         except Exception as e:
-            print(f"Erro PIL ao carregar {time}: {e}")
+            print(f"Erro ao carregar imagem do {time}: {e}")
 
-    # Escudo Vetorial de Alta Qualidade (Fallback limpo e profissional no Canvas)
+    # Fallback Vetorial Personalizado no Canvas (caso a imagem falhe)
     canvas = tk.Canvas(parent, width=36, height=36, bg="white", highlightthickness=0)
     cor = info.get("cor", "#333333")
     sigla = info.get("sigla", "TIME")
@@ -403,7 +472,7 @@ def fechar_programa():
 
 
 # =====================================================
-# LAYOUT
+# LAYOUT DA APLICAÇÃO
 # =====================================================
 
 lado_esquerdo = tk.Frame(janela, bg="white", padx=10, pady=10)
@@ -415,7 +484,7 @@ lado_direito.pack(side="right", fill="both", expand=True)
 tk.Label(lado_esquerdo, text=NOME_LOJA, font=("Arial", 16, "bold"), bg="white", fg="#b71c1c").pack(anchor="w")
 tk.Label(lado_esquerdo, text="Entrega Fixa: R$ 10,00", font=("Arial", 9), bg="white", fg="#555").pack(anchor="w", pady=(0, 5))
 
-frame_times = tk.LabelFrame(lado_esquerdo, text="Escolha o Time (Escudos PNG)", bg="white", padx=5, pady=5)
+frame_times = tk.LabelFrame(lado_esquerdo, text="Escolha o Time (Escudos PNG HD)", bg="white", padx=5, pady=5)
 frame_times.pack(fill="both", expand=True)
 
 canvas_times = tk.Canvas(frame_times, bg="white", highlightthickness=0)
@@ -479,7 +548,7 @@ campo_numero.pack(side="left", padx=3)
 
 tk.Button(lado_esquerdo, text="Adicionar ao Carrinho", command=adicionar_carrinho, bg="#b71c1c", fg="white", font=("Arial", 10, "bold")).pack(fill="x", pady=6)
 
-# Lado Direito
+# Lado Direito (Carrinho e Checkout)
 tk.Label(lado_direito, text="CARRINHO DE COMPRAS", font=("Arial", 14, "bold"), bg="#c62828", fg="white").pack(anchor="w")
 
 frame_carrinho = tk.LabelFrame(lado_direito, text="Itens Selecionados", bg="#c62828", fg="white", padx=5, pady=5)
